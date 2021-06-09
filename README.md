@@ -73,3 +73,8 @@ NAME            STATUS   ROLES                  AGE     VERSION
 ip-10-0-0-100   Ready    control-plane,master   12m     v1.21.1
 ip-10-0-0-168   Ready    <none>                 2m11s   v1.21.1
 ```
+- you can also use below command on master node to generate the join command
+```
+kubeadm token create --print-join-command
+```
+
