@@ -1,5 +1,6 @@
 # k8s Bootstrapping clusters with kubeadm
 This repository simplifys some of the k8s cluster configuration it uses kubeadm
+This will deploy one k8s master and 2 nodes, you can increase the nodes just by incrementing the count value. It uses t2.medium for all the nodes
 
 ```
 git clone https://github.com/scshitole/k8s.git
@@ -22,7 +23,7 @@ Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
 
- mkdir -p $HOME/.kube
+  mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
@@ -30,8 +31,8 @@ Alternatively, if you are the root user, you can run:
 
   export KUBECONFIG=/etc/kubernetes/admin.conf
 
-You should now deploy a pod network to the cluster.
-Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  You should now deploy a pod network to the cluster.
+  Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
 ```
