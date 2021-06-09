@@ -1,9 +1,7 @@
 # k8s Bootstrapping clusters with kubeadm
 This repository simplifys some of the k8s cluster configuration it uses kubeadm
 
-
-
-# how to use this repo
+## how to use this repo
 ```
 git clone https://github.com/scshitole/k8s.git
 
