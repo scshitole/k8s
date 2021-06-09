@@ -13,7 +13,7 @@ kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 - Note down the join command which you need to execute on the k8s nodes
 
-You will see output shown below on the master k8s node
+- You will see output shown below on the master k8s node
 
 ```
 [addons] Applied essential addon: kube-proxy
@@ -34,12 +34,15 @@ You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
-Then you can join any number of worker nodes by running the following on each as root:
+```
 
+- Then you can join any number of worker nodes by running the following on each  as root:
+
+```
 kubeadm join 10.0.0.100:6443 --token wuipg1.vimk1zvlm2e93o03 \
 	--discovery-token-ca-cert-hash sha256:b8b9b05e1e87c21d5d5712ab3a44b2721b9a6eee315ee927e40b5521xxx41
 ```
-Once you followed above commands on master  you should see below master not ready ..
+- Once you followed above commands on master  you should see below master not ready ..
 
 ```
 root@ip-10-0-0-100:/home/ubuntu# kubectl get nodes
