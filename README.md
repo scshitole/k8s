@@ -1,4 +1,7 @@
-# k8s
+# k8s Bootstrapping clusters with kubeadm
+This repository simplifys some of the k8s cluster configuration it uses kubeadm
+
+
 
 # how to use this repo
 ```
