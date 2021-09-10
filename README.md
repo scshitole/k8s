@@ -6,8 +6,14 @@ This will deploy one k8s master and 2 nodes, you can increase the nodes just by 
 git clone https://github.com/scshitole/k8s.git
 
 ```
-#### Once done go into the directory k8s, terraform output command will provide the ssh for master and node node
-- SSH to the master node and execute the command below and follow the output steps
+#### Once done go into the directory k8s
+```
+terraform output
+
+```
+command will provide the ssh for master and node node
+
+#### SSH to the master node and execute the command below and follow the output steps
 
 ```
 sudo su
