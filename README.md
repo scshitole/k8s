@@ -10,6 +10,7 @@ git clone https://github.com/scshitole/k8s.git
 - SSH to the master node and execute the command below and follow the output steps
 
 ```
+sudo su
 kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 - Note down the join command which you need to execute on the k8s nodes
