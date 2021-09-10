@@ -81,11 +81,11 @@ kubeadm token create --print-join-command
 - If you want to use kubectl from your labtop then follow steps below
 
 ```
- terraform output
+terraform output
 To_SSH_into_k8s-master_ubuntu = "ssh -i terraform-20210910155113245700000001.pem ubuntu@54.214.222.64"
 To_SSH_into_k8s-worker = [
-  "ssh -i terraform-20210910155113245700000001.pem ubuntu@34.221.61.160",
-  "ssh -i terraform-20210910155113245700000001.pem ubuntu@54.202.23.84",
+"ssh -i terraform-20210910155113245700000001.pem ubuntu@34.221.61.160",
+"ssh -i terraform-20210910155113245700000001.pem ubuntu@54.202.23.84",
 ]
 ```
 - ssh into the k8s master node using the above command
@@ -101,9 +101,10 @@ sudo su
 kubeadm reset
 kubeadm join 10.0.0.100:6443 --token aaz8gb.sjen8vdgqioveudo \
 > --discovery-token-ca-cert-hash sha256:facb4e17018e6e48142ec6bd1fa88810da2667b9ff8f537a3298ccafa90926d2
+
 ```
 
-- copy the k8s cnfig from k8s master to you labtop at ~/.kube/config 
+- copy  k8s config from k8s master to you labtop at ~/.kube/config 
 ```
 scp -i terraform-20210910155113245700000001.pem ubuntu@54.214.222.64:/etc/kubernetes/admin.conf ~/.kube/config
 
@@ -112,5 +113,5 @@ scp -i terraform-20210910155113245700000001.pem ubuntu@54.214.222.64:/etc/kubern
 - Replace the private IP in the ~/.kube/config file by the Public IP of k8s master
 
 ```
-    server: https://10.0.0.100:6443 by  server: https://<publicIPofk8sMaster>:6443
+server: https://10.0.0.100:6443 by  server: https://<publicIPofk8sMaster>:6443
 ```
