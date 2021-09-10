@@ -101,6 +101,7 @@ sudo su
 kubeadm reset
 kubeadm join 10.0.0.100:6443 --token aaz8gb.sjen8vdgqioveudo \
 > --discovery-token-ca-cert-hash sha256:facb4e17018e6e48142ec6bd1fa88810da2667b9ff8f537a3298ccafa90926d2
+```
 
 - copy the k8s cnfig from k8s master to you labtop at ~/.kube/config 
 ```
