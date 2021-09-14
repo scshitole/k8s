@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: command3
+spec:
+  containers:
+  - name: command3
+    image: debian
+    env:
+    - name: MESSAGE
+      value: "hello world"
+    command: ["/bin/sh", "-c"]
+    args: ["/bin/echo $(MESSAGE); ls -lrt; sleep 60"]
+  hostname: "some"
+  restartPolicy: OnFailure
