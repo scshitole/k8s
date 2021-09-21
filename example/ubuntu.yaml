@@ -1,10 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mywebserver
+  name: ubuntu
 spec:
   containers:
-  - name: mywebserver
+  - name: ubuntu
     image: nginx
+  nodeSelector:
+    key: node1
     ports: 
     - containerPort: 80

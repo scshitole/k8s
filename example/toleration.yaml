@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: kplabs-toleration
+spec:
+  replicas: 15
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: php-redis
+        image: nginx
+      tolerations:
+      - key: key
+        operator: "Exists"
+        effect: "NoSchedule" 
+
