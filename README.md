@@ -17,6 +17,13 @@ command will provide the ssh for master and node node
 
 ```
 sudo su
+rm /etc/containerd/config.toml
+systemctl restart containerd
+
+```
+
+```
+sudo su
 kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 #### Note down the join command which you need to execute on the k8s nodes, You will see output shown below on the master k8s node
