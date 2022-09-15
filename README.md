@@ -67,7 +67,11 @@ ip-10-0-0-100   NotReady   control-plane,master   3m50s   v1.21.1
 #### Run join command on nodes
 
 ```
-ubuntu@ip-10-0-0-168:~$ sudo su
+sudo su
+rm /etc/containerd/config.toml
+systemctl restart containerd
+
+kubeadm reset
 root@ip-10-0-0-168:/home/ubuntu# kubeadm join 10.0.0.100:6443 --token wuipg1.vimk1zvlm2e93o03 --discovery-token-ca-cert-hash sha256:b8b9b05e1e87c21d5d5712ab3a44b2721b9a6eee315ee927e40b55219093341e
 
 root@ip-10-0-0-100:/home/ubuntu# kubectl get nodes
