@@ -25,7 +25,7 @@ extension_packages:
   install_operations:
     - extensionType: as3
       extensionVersion: 3.36.1
-      extensionUrl: file:///var/config/rest/downloads/f5-appsvcs-3.36.0-6.noarch.rpm
+      extensionUrl: file:///var/config/rest/downloads/f5-appsvcs-3.36.1-1.noarch.rpm
     - extensionType: fast
       extensionVersion: 1.19.0
       extensionUrl: file:///var/config/rest/downloads/f5-appsvcs-templates-1.19.0-1.noarch.rpm
@@ -58,7 +58,7 @@ source /usr/lib/bigstart/bigip-ready-functions
 wait_bigip_ready
 
 for i in {1..30}; do
-    curl -fv --retry 1 --connect-timeout 5 -L "https://github.com/F5Networks/f5-appsvcs-extension/releases/download/v3.36.1/f5-appsvcs-3.36.0-6.noarch.rpm" -o "/var/config/rest/downloads/f5-appsvcs-3.36.0-6.noarch.rpm" && break || sleep 10
+    curl -fv --retry 1 --connect-timeout 5 -L "https://github.com/F5Networks/f5-appsvcs-extension/releases/download/v3.36.1/f5-appsvcs-3.36.1-1.noarch.rpm" -o "/var/config/rest/downloads/f5-appsvcs-3.36.1-1.noarch.rpm" && break || sleep 10
 done
 
 for i in {1..30}; do
